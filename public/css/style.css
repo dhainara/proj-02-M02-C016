@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Inter&family=Kumbh+Sans&family=Open+Sans:wght@500&family=Plus+Jakarta+Sans:wght@300&family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    height:100vh;
+    width: 100vw;
+}
+header {
+    min-height: 10%;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img,footer img {
+    width: 50px;
+}
+
+header p {
+    display: inline;
+}
+
+main{
+    height: auto;
+}
+
+section#banner_Cad {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    background-color: rgba(198, 0, 0);
+    height: auto;
+    padding: 50px 20px;
+}
+
+.banner_Img img{
+    width: 250px;
+}
+
+.banner_Cadform form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 350px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px 5px;
+}
+
+.banner_Cadform fieldset {
+    border: none;
+}
+
+.banner_Cadform input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: lightgrey;
+    padding: 7px;
+    width:250px;
+}
+
+section#banner_Cad button {
+    background-color: red;
+    padding: 20px;
+    border: none;
+}
+
+section#banner_Cad button:hover {
+    background-color: grey;
+    transition: 0.3s;
+}
+
+/*card*/
+
+section#card_poke{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    min-height: 300px;
+    padding: 20px;
+}
+#card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgrey;
+    border-radius: 15px;
+    padding: 20px 20px;
+    width: 250px;
+    gap: 15px;
+}
+
+#card img {
+    width: 150px;
+}
+
+#card div#card_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_title {
+    display: flex;
+    flex-direction: column;
+}
+
+a{
+    text-decoration: none;
+    color: currentColor;
+}
+
+footer {
+    min-height: 10%;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height:20%;
+    background-color: rgba(22, 22, 22);
+    color: white;
+    gap: 10px;
+}
+footer section {
+    display: flex;
+    gap:10px;
+}
+
+footer section#footer_info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+footer img{
+    min-height: 20%;
+    color: white;
+}
