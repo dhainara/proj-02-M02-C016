@@ -42,7 +42,7 @@ const infoPokemons = [
     name: "Psyduck",
     type: "Água",
     image: "psyduck.gif",
-    description: "Psyduck is constantly beset by headaches. If the Pokémon lets its strange power erupt, apparently the pain subsides for a while.",
+    description: "Psyduck is constantly beset by headaches. If the Pokémon lets its strange power erupt, apparently the pain subsides for a while. Psyduck is constantly beset by headaches. If the Pokémon lets its strange power erupt, apparently the pain subsides for a while. ",
     height: "0.8m",
     weight: "19.6kg",
     category: "Pato",
@@ -92,7 +92,7 @@ const infoPokemons = [
     description: "When it retracts its long neck into its shell, it squirts out water with vigorous force.",
     height: "0.5m",
     weight: "9,0kg",
-    category: "Pequena Tartaruga",
+    category: "Tartaruga",
     ability: "Torrent",
     weakness: "Elétrico"
   },
@@ -101,4 +101,20 @@ const infoPokemons = [
 app.get("/", (req, res) => {
   res.render('index.ejs', { infoPokemons })
 })
+
+app.get('/detalhes/:id/', (req, res) => {
+  let pokemon = []
+  infoPokemons.filter((element) => {
+    if (element.id == +req.params.id) {
+      pokemon=element
+    }
+  })
+
+  res.render('detalhes.ejs', {pokemon})
+})
+
+app.get('/cadastro/', (req, res) => {
+  res.render('cadastro.ejs')
+})
+
 

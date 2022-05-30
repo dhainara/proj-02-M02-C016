@@ -10,13 +10,7 @@
     <title>Inicio</title>
 </head>
 <body>
-    <header>
-        <a href=""><img src="/img/pokeball.png" alt="pokebola" /></a>
-        <nav>
-            <p><a href=""><i class="bi bi-house"></i>Inicio</a></p>
-            <p><a href=""><i class="bi bi-book"></i>Cadastro</a></p>
-        </nav>
-    </header>
+    <%- include('./partials/header.ejs') %>
     <main>
         <section id="banner_Cad">
             <article class="banner_Img">
@@ -27,36 +21,23 @@
                 <%- include('./partials/cadastroPartial.ejs')%> 
             </article>
         </section>
-        <% infoPokemons.forEach(element => { %>
-            <section id="card_poke">
-                <a href="">
-                    <article id="card">
-                        <div id="card_title">
-                            <div class="card_title">
-                                <h2><%=element.name%></h2>
-                                    <p><i class="bi bi-brightness-high"></i><%=element.category%></p>
-                            </div>
-                            <img src="/img/<%=element.image%>"/>
-                        </div>
-                    </article>
-                </a>
-            </section>
-        <% }) %>
         
+        <section id="card_poke">
+            <% infoPokemons.forEach(element=> { %>
+            <a href="/detalhes/<%=element.id%>">
+                <article id="card">
+                    <div id="card_title">
+                        <div class="card_title">
+                            <h2><%=element.name%></h2>
+                                <p><i class="bi bi-brightness-high"></i><%=element.category%></p>
+                        </div>
+                        <img src="/img/<%=element.image%>"/>
+                    </div>
+                </article>
+            </a>
+            <% }) %>
+        </section>
     </main>
-    <hr>
-    <footer>
-        <section>
-            <img src="/img/pokeball.png" alt="pokebola" />
-        </section>
-        <section id="footer_info">
-            <p>Armazenamento pokemon de confiança.</p>
-            <p>© Dhainara 2022.Todos os diretos reservados.</p>
-        </section>
-        <section id="footer_info">
-            <a href="linkedin.com"><i class="bi bi-linkedin"></i></a>
-            <a href="github.com"><i class="bi bi-github"></i></a>
-        </section>
-    </footer>
+    <%- include('./partials/footer.ejs') %>
 </body>
 </html>

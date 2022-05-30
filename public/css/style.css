@@ -1,3 +1,4 @@
+/*site default*/
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Inter&family=Kumbh+Sans&family=Open+Sans:wght@500&family=Plus+Jakarta+Sans:wght@300&family=Poppins&display=swap');
 
 * {
@@ -11,11 +12,11 @@ body {
     width: 100vw;
 }
 header {
-    min-height: 10%;
-    padding: 15px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    min-height: 7%;
+    padding: 15px 15px;
 }
 
 header img,footer img {
@@ -29,7 +30,9 @@ header p {
 main{
     height: auto;
 }
+/*fim site default*/
 
+/*banner*/
 section#banner_Cad {
     display: flex;
     justify-content: space-evenly;
@@ -84,6 +87,7 @@ section#banner_Cad button:hover {
     background-color: grey;
     transition: 0.3s;
 }
+/*fim banner cadastro*/
 
 /*card*/
 
@@ -92,40 +96,64 @@ section#card_poke{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 20px;
     min-height: 300px;
     padding: 20px;
 }
-#card {
+
+article#card {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
     background-color: lightgrey;
     border-radius: 15px;
-    padding: 20px 20px;
     width: 250px;
-    gap: 15px;
+    height: 115px;
+    padding: 15px;
 }
 
 #card img {
-    width: 150px;
+    width: 110px;
 }
 
 #card div#card_title {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .card_title {
     display: flex;
     flex-direction: column;
+    gap:10px;
+    font-size: 12px;
 }
 
+.card_title p{
+    background-color: chocolate;
+    color: white;
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+/*fim do card*/
 a{
     text-decoration: none;
     color: currentColor;
 }
+
+/*botão do card*/
+#card_actions {
+    display: flex;
+    flex-direction: column;
+}
+/*fim botão do card*/
+
+/*footer*/
 
 footer {
     min-height: 10%;
@@ -153,3 +181,5 @@ footer img{
     min-height: 20%;
     color: white;
 }
+
+/*footer*/

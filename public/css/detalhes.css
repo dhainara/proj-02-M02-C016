@@ -1,3 +1,4 @@
+/*site default*/
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Inter&family=Kumbh+Sans&family=Open+Sans:wght@500&family=Plus+Jakarta+Sans:wght@300&family=Poppins&display=swap');
 
 * {
@@ -12,14 +13,15 @@ body {
 }
 
 header {
-    min-height: 10%;
-    padding: 15px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    min-height: 7%;
+    padding: 15px 15px;
 }
 
-header img,footer img {
+header img,
+footer img {
     width: 50px;
 }
 
@@ -31,22 +33,102 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 30px;
     flex-direction: column;
-    height: 70%;
+    gap: 50px;
+    padding: 20px;
+    min-height: 73%;
     background-color: rgba(241, 211, 64);
 }
 
-#card {
+/*fim site default*/
+section#card_poke {
+
+}
+
+/*ESTRUTURA CARD*/
+
+.card {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: white;
-    box-shadow: 20px 20px rgb(252, 243, 153);
+    box-shadow: 10px 10px rgb(255, 255, 255, 0.5);
     border-radius: 15px;
-    padding:20px;
+    padding: 20px;
+    width: 270px;
+    height:fit-content;
+    gap: 20px;
+}
+/*IMG E TITULO*/
+#card_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content; 
+    gap: 20px;
+}
+
+.card_title {
+    display: flex;
+    flex-direction: column;
+}
+
+.card_titleImg img {
+    width: 100px;
+}
+
+/*INFO*/
+#card_data {
+    display: flex;
+    height: fit-content;
+}
+
+.card_data {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card_data h6 {
+    color: red;
+}
+
+
+/*Descricao*/
+#card_description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: grey;
+    height: fit-content;
+}
+/*botoes*/
+#card_actions {
+    display: flex;
+    gap: 20px;
+}
+
+#card_actions a {
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: currentColor;
+}
+/*
+section {
+    display: flex;
+    flex-wrap: wrap;
+}
+#card {
+    
+    
     width: 250px;
     gap: 15px;
 }
@@ -56,6 +138,7 @@ main {
 #card div#card_title {
     display: flex;
     flex-wrap: wrap;
+    height: 100px;
 }
 .card_title {
     display: flex;
@@ -65,6 +148,7 @@ main {
 #card div#card_data {
     display: flex; 
     gap: 10px;
+    height: fit-content
 }
 
 #card div.card_data {
@@ -80,6 +164,7 @@ main {
 #card div#card_description p {
     color: grey;
     font-size: 15px;
+    height: 300px;
 }
 
 section#card_actions{
@@ -102,6 +187,8 @@ a {
     color: currentColor;
 }
 
+/*footer*/
+
 footer {
     min-height: 10%;
     padding: 15px 50px;
@@ -109,6 +196,25 @@ footer {
     justify-content: space-around;
     align-items: center;
     height: 20%;
-    background-color: rgb(27, 27, 27);
+    background-color: rgba(22, 22, 22);
+    color: white;
+    gap: 10px;
+}
+
+footer section {
+    display: flex;
+    gap: 10px;
+}
+
+footer section#footer_info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+footer img {
+    min-height: 20%;
     color: white;
 }
+
+/*footer*/

@@ -1,49 +1,107 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Poppins&display=swap');
+/*site default*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Inter&family=Kumbh+Sans&family=Open+Sans:wght@500&family=Plus+Jakarta+Sans:wght@300&family=Poppins&display=swap');
 
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Open Sans', sans-serif;
-}
-
-a {
-    text-decoration: none;
+    font-family: 'Inter', sans-serif;
 }
 
 body {
     height: 100vh;
-    width: 100%;
-    background-color: currentColor;
+    width: 100vw;
 }
 
 header {
-    padding: 10px;
-    height: 50px, 10%;
-    background-color: lightgreen;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 7%;
+    padding: 15px 15px;
 }
 
-nav {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    gap: 20px;
+header img, footer img {
+    width: 50px;
+}
+
+header p {
+    display: inline;
 }
 
 main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80%;
-    background-color: ivory;
-    padding: 10px;
+    min-height: 600px;
+    background-color: rgba(119, 194, 254);
+    padding: 20px;
 }
 
-footer {
+
+section#cadscreen{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    height: 10%;
-    padding: 10px;
-    background-color: lightgreen;
 }
+
+.cadscreen {
+    display: flex;
+    height: fit-content;
+    width: 900px;
+}
+
+.cad_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgba(241, 190, 129);
+}
+
+.cad_img img {
+    width: 100%;
+}
+
+.cad_form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: white;
+}
+/*footer*/
+
+footer {
+    min-height: 10%;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 20%;
+    background-color: rgba(22, 22, 22);
+    color: white;
+    gap: 10px;
+}
+
+footer section {
+    display: flex;
+    gap: 10px;
+}
+
+footer section#footer_info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+footer img {
+    min-height: 20%;
+    color: white;
+}
+
+/*footer*/
