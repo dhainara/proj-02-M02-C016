@@ -11,28 +11,71 @@ body {
     height:100vh;
     width: 100vw;
 }
+
+/*Header*/
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    min-height: 7%;
-    padding: 15px 15px;
+    gap: 20px;
+    min-height: 5%;
+    padding: 10px;
+}
+header nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 32px;
 }
 
 header img,footer img {
-    width: 50px;
+    width: 110px;
 }
 
-header p {
-    display: inline;
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+/*banner inicial*/
+section#banner_home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-image: url('/img/back.png');
+    height: 300px;
+    padding: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section#banner_home div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:20px;
+}
+
+section#banner_home div img {
+    width: 90%;
+}
+
+section#banner_home button {
+    background-color: firebrick;
+    padding: 20px;
+    color: white;
+    border-radius: 20px;
+    border: none;
 }
 
 main{
     height: auto;
 }
-/*fim site default*/
 
-/*banner*/
+/*banner do cadastro*/
 section#banner_Cad {
     display: flex;
     justify-content: space-evenly;
@@ -51,95 +94,153 @@ section#banner_Cad {
 .banner_Cadform form {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
     gap: 10px;
     width: 350px;
     background-color: white;
     border-radius: 15px;
     padding: 15px 5px;
+    font-size: 13px;
 }
 
 .banner_Cadform fieldset {
     border: none;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
 }
 
 .banner_Cadform input {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
     border: none;
     border-radius: 10px;
     background-color: lightgrey;
     padding: 7px;
-    width:250px;
+    width:150px;
+}
+
+.banner_Cadform label {
+    width: 50%;
+    text-align:left;
 }
 
 section#banner_Cad button {
-    background-color: red;
-    padding: 20px;
+    background-color: rgba(198, 0, 0);
+    padding: 15px;
     border: none;
+    color: white;
+    border-radius: 20px;
 }
 
 section#banner_Cad button:hover {
     background-color: grey;
     transition: 0.3s;
 }
-/*fim banner cadastro*/
 
-/*card*/
-
+/*ESTRUTURA CARD*/
 section#card_poke{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 20px;
-    min-height: 300px;
-    padding: 20px;
+    gap: 30px;
+    padding: 30px;
 }
 
-article#card {
+#card {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-    background-color: lightgrey;
+    background-color: #f6f6f6;
     border-radius: 15px;
     width: 250px;
-    height: 115px;
-    padding: 15px;
+    padding:20px;
+    height: fit-content;
+    gap: 20px;
+    font-size: 13px;
 }
 
-#card img {
-    width: 110px;
-}
-
-#card div#card_title {
+/*IMG E TITULO*/
+article#card div.card_title {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 20px;
 }
 
-.card_title {
-    display: flex;
-    flex-direction: column;
-    gap:10px;
-    font-size: 12px;
+.card_title img {
+    width: 100px;
 }
 
-.card_title p{
-    background-color: chocolate;
-    color: white;
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.info p {
+    background-color: rgba(253, 1, 1);
+    border-radius: 15px;
     width: fit-content;
     padding: 5px 10px;
-    border-radius: 15px;
+    color: white;
+
 }
+.card_title p {
+    display: flex;
+    gap: 10px;
+    background-color: lightgrey;
+    width: fit-content;
+}
+
+/*INFO*/
+.card_data  {
+    display: flex;
+    gap: 20px;
+    height: fit-content;
+    padding: 0 20px;
+}
+
+.card_data div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+
+/*Descricao*/
+.card_description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(29, 24, 24);
+    height: fit-content;
+}
+
+/*botoes*/
+.card_actions {
+    display: flex;
+    gap: 20px;
+}
+
+.card_actions ul li {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(254, 132, 132);
+    border-radius: 15px;
+    padding: 10px;
+    list-style: none;
+}
+
+.card_actions ul li:hover {
+    background-color: rgba(198, 0, 0);
+    transition: 0.3s;
+}
+
 /*fim do card*/
 a{
     text-decoration: none;
@@ -161,7 +262,7 @@ footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height:20%;
+    height:18%;
     background-color: rgba(22, 22, 22);
     color: white;
     gap: 10px;
@@ -178,8 +279,29 @@ footer section#footer_info {
 }
 
 footer img{
-    min-height: 20%;
     color: white;
 }
 
 /*footer*/
+
+section#mensagem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: rgb(255, 204, 197);
+    color: #4d0000;
+    position: fixed;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    width: 800%;
+    
+}
+
+span#close {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: .3s;
+}

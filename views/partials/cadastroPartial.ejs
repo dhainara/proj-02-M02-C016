@@ -1,36 +1,83 @@
-<form>
-    <h2>Cadastro</h2>
-    <fieldset>
-        <input type="number" id="number" placeholder="Número">
-    </fieldset>
-    <fieldset>
-        <input type="text" id="number" placeholder="Nome">
-    </fieldset>
-    <fieldset>
-        <input type="text" id="type" placeholder="Tipo">
-    </fieldset>
-    <fieldset>
-        <input type="url" id="img" placeholder="Imagem">
-    </fieldset>
-    <fieldset>
-        <input type="text" id="description" placeholder="Descrição">
-
-    </fieldset>
-    <fieldset>
-        <input type="number" id="height" placeholder="Altura">
-    </fieldset>
-    <fieldset>
-        <input type="number" id="peso" placeholder="Peso">
-    </fieldset>
-    <fieldset>
-        <input type="text" id="category" placeholder="Categoria">
-    </fieldset>
-    <fieldset>
-        <input type="text" id="hability" placeholder="Habilidade">
-    </fieldset>
-    <fieldset>
-        <input type="color" id="color" placeholder="Cor">
-    </fieldset>
-    </fieldset>
-    <button type="submit">Cadastrar</button>
+<% if (pokemon==undefined) { %>
+<form action="/criar" method="POST">
+        <h2>Cadastro</h2>
+        <fieldset>
+            <label for="number">Numero</label>
+            <input type="number" id="number" required/>
+        </fieldset>
+        <fieldset>
+            <label for="name">Nome</label>
+            <input type="text" id="name" required/>
+        </fieldset>
+        <fieldset>
+            <label for="type">Tipo</label>
+            <input type="text" id="type" required/>
+        </fieldset>
+        <fieldset>
+            <label for="img">URL do Pokemon</label>
+            <input type="url" id="img" required/>
+        </fieldset>
+        <fieldset>
+            <label for="description">Decrição</label>
+            <input type="text" id="description" required/>
+        </fieldset>
+        <fieldset>
+            <label for="height">Altura</label>
+            <input type="number" id="height" required/>
+        </fieldset>
+        <fieldset>
+            <label for="weight">Peso</label>
+            <input type="number" id="weight" required/>
+        </fieldset>
+        <fieldset>
+            <label for="category">Categoria</label>
+            <input type="text" id="category" required/>
+        </fieldset>
+        <fieldset>
+            <label for="ability">Habilidade</label>
+            <input type="text" id="hability" required/>
+        </fieldset>
+        <button id="btnCadastrar"type="submit">Cadastrar</button>
 </form>
+<% } else { %>
+<form action="/update/<%=pokemon.id%>" method="POST">
+    <h2>UALIZAR: Cadastro</h2>
+    <fieldset>
+        <label for="number"></label>
+        <input type="number" id="number" placeholder="Número" value="<%=pokemon.number%>">
+    </fieldset>
+    <fieldset>
+        <label for="name"></label>
+        <input type="text" id="name" placeholder="Nome" value="<%=pokemon.name%>">
+    </fieldset>
+    <fieldset>
+        <label for="typé"></label>
+        <input type="text" id="type" placeholder="Tipo" value="<%=pokemon.type%>">
+    </fieldset>
+    <fieldset>
+        <label for="img"></label>
+        <input type="url" id="img" placeholder="Imagem" value="<%=pokemon.img%>">
+    </fieldset>
+    <fieldset>
+        <label for="description"></label>
+        <input type="text" id="description" placeholder="Descrição" value="<%=pokemon.description%>">
+    </fieldset>
+    <fieldset>
+        <label for="height"></label>
+        <input type="number" id="height" placeholder="Altura" value="<%=pokemon.height%>">
+    </fieldset>
+    <fieldset>
+        <label for="weight"></label>
+        <input type="number" id="weight" placeholder="Peso" value="<%=pokemon.weight%>">
+    </fieldset>
+    <fieldset>
+        <label for="category"></label>
+        <input type="text" id="category" placeholder="Categoria" value="<%=pokemon.category%>">
+    </fieldset>
+    <fieldset>
+        <label for="ability"></label>
+        <input type="text" id="ability" placeholder="Habilidade" value="<%=pokemon.ability%>">
+    </fieldset>
+    <button id="btnAtualizar" type="submit">Atualizar</button>
+</form>
+<% } %>

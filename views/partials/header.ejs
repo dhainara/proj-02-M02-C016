@@ -1,7 +1,14 @@
 <header>
-    <a href="/"><img src="/img/pokeball.png" alt="pokebola" /></a>
     <nav>
-        <p><a href=""><i class="bi bi-house"></i>Inicio</a></p>
-        <p><a href="/cadastro"><i class="bi bi-book"></i>Cadastro</a></p>
+        <a href="/"><img src="/img/pokeball.png" alt="pokebola" /></a>
+        <ul>
+            <li><a href="#banner_Cad">Cadastro</a></li>
+        </ul>
     </nav>
+    <% if(mensagem != ""){ %>
+    <section id="mensagem">
+      <p><%=mensagem%></p>
+      <span id="close">&times;</span>
+    </section>
+    <% } %>
 </header>
