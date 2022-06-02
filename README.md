@@ -29,7 +29,7 @@ Agora você deve digitar em seu terminal: npm run dev (isso irá startar seu ser
 Abra o link que o terminal gerou.
 
 Exemplo: Servidor rodando em http://localhost:3000
-
+```
 ## Contato
 LinkedIn: https://www.linkedin.com/in/dhainara-corr%C3%AAa-7913a01b2/
 E-mail: dhainara.souza@gmail.com
